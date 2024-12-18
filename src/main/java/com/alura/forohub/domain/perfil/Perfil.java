@@ -1,11 +1,16 @@
 package com.alura.forohub.domain.perfil;
 
+import com.alura.forohub.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity(name = "Perfil")
 @Table(name = "perfiles")
 @Getter
@@ -20,9 +25,14 @@ public class Perfil {
 
     private String nombre;
 
-    public Perfil() {
+    @ManyToMany(mappedBy = "perfiles") // Relación inversa de la relación en Usuario
+    private List<Usuario> usuarios = new ArrayList<>();
+
+    public Perfil(@Valid DatosRegistraPerfil datosRegistraPerfil) {
+        this.nombre = datosRegistraPerfil.nombre();
     }
 
+    // Getters
     public Long getId() {
         return id;
     }
@@ -31,7 +41,19 @@ public class Perfil {
         return nombre;
     }
 
-    public Perfil(@Valid DatosRegistraPerfil datosRegistraPerfil) {
-        this.nombre = datosRegistraPerfil.nombre();
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public Perfil() {
+    }
+
+    @Override
+    public String toString() {
+        return "Perfil{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", usuarios=" + usuarios +
+                '}';
     }
 }

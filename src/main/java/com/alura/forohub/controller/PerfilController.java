@@ -35,8 +35,16 @@ public class PerfilController {
     public ResponseEntity<DatosSalidaPerfil> guardaPerfil(@RequestBody @Valid DatosRegistraPerfil datosRegistraPerfil, UriComponentsBuilder uriComponentsBuilder){
         //convierte de DTO a prefil
         Perfil perfil = new Perfil(datosRegistraPerfil);
+        System.out.println(perfil.getId());
         perfilRepository.save(perfil);
     URI uri = uriComponentsBuilder.path("/perfiles/{id}").buildAndExpand(perfil.getId()).toUri();
     return ResponseEntity.created(uri).body(new DatosSalidaPerfil(perfil.getId(), perfil.getNombre()));
+    }
+
+    @Override
+    public String toString() {
+        return "PerfilController{" +
+                "perfilRepository=" + perfilRepository +
+                '}';
     }
 }
