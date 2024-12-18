@@ -2,7 +2,7 @@ package com.alura.forohub.controller;
 
 import com.alura.forohub.domain.curso.Curso;
 import com.alura.forohub.domain.curso.CursoRepository;
-import com.alura.forohub.domain.curso.DatosCursoSalida;
+import com.alura.forohub.domain.curso.DatosSalidaCurso;
 import com.alura.forohub.domain.curso.DatosRegistraCurso;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,20 +24,20 @@ public class CursoController {
 
     @Transactional
     @PostMapping
-    public ResponseEntity<DatosCursoSalida> guardaCurso(@RequestBody @Valid DatosRegistraCurso datosRegistraCurso,
+    public ResponseEntity<DatosSalidaCurso> guardaCurso(@RequestBody @Valid DatosRegistraCurso datosRegistraCurso,
                                                         UriComponentsBuilder uriComponentsBuilder){
         Curso curso = cursoRepository.save(new Curso(datosRegistraCurso.id(),
                 datosRegistraCurso.nombre(),
                 datosRegistraCurso.categoria()));
         URI uri = uriComponentsBuilder.path("/cursos/{id}").buildAndExpand(curso.getId()).toUri();
 
-        return ResponseEntity.created(uri).body(new DatosCursoSalida(curso.getId(), curso.getNombre(), curso.getCategoria()));
+        return ResponseEntity.created(uri).body(new DatosSalidaCurso(curso.getId(), curso.getNombre(), curso.getCategoria()));
     }
 
     @GetMapping
-    public ResponseEntity<Page<DatosCursoSalida>> obtenerDatos(Pageable paginacion){
+    public ResponseEntity<Page<DatosSalidaCurso>> obtenerDatos(Pageable paginacion){
         return ResponseEntity.ok( cursoRepository.findAll(paginacion)
-                .map(c -> new DatosCursoSalida(c.getId()
+                .map(c -> new DatosSalidaCurso(c.getId()
                         , c.getNombre()
                         , c.getCategoria())));
     }
