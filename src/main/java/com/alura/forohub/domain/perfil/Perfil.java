@@ -54,8 +54,6 @@ public class Perfil {
     public String toString() {
         return "Perfil{" +
                 "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", usuarios=" + usuarios +
-                '}';
+                ", nombre='" + nombre + '\'';
     }
 }

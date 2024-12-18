@@ -14,7 +14,6 @@ import java.util.List;
 @Entity(name = "Topico")
 @Table(name = "topicos")
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Topico {
@@ -36,6 +35,67 @@ public class Topico {
     @JoinColumn(name = "curso_id")  // Columna que relaciona al curso
     private Curso curso;  // El curso asociado al tópico
 
-    @OneToMany(mappedBy = "topico", fetch = FetchType.LAZY)  // Relación uno a muchos con Respuesta
-    private List<Respuesta> respuestas;  // Las respuestas asociadas al tópico
+    public Topico() {
+    }
+
+    public Topico( String titulo, String mensaje, LocalDateTime fechaCreacion, String status, Usuario autor, Curso curso) {
+        this.titulo = titulo;
+        this.mensaje = mensaje;
+        this.fechaCreacion = fechaCreacion;
+        this.status = status;
+        this.autor = autor;
+        this.curso = curso;
+    }
+
+    public Topico(Long id, String titulo, String mensaje, LocalDateTime fechaCreacion, String status, Usuario autor, Curso curso, List<Respuesta> respuestas) {
+        this.id = id;
+        this.titulo = titulo;
+        this.mensaje = mensaje;
+        this.fechaCreacion = fechaCreacion;
+        this.status = status;
+        this.autor = autor;
+        this.curso = curso;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Usuario getAutor() {
+        return autor;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Topico{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", mensaje='" + mensaje + '\'' +
+                ", fechaCreacion=" + fechaCreacion +
+                ", status='" + status + '\'' +
+                ", autor=" + autor +
+                ", curso=" + curso +
+                '}';
+    }
 }

@@ -37,7 +37,8 @@ public class CursoController {
     @GetMapping
     public ResponseEntity<Page<DatosSalidaCurso>> obtenerDatos(Pageable paginacion){
         return ResponseEntity.ok( cursoRepository.findAll(paginacion)
-                .map(c -> new DatosSalidaCurso(c.getId()
+                .map(c -> new DatosSalidaCurso(
+                        c.getId()
                         , c.getNombre()
                         , c.getCategoria())));
     }
