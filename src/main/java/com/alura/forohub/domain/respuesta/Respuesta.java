@@ -39,10 +39,12 @@ public class Respuesta {
         return id;
     }
 
-    public Respuesta(Long id, String mensaje, LocalDateTime fechaCreacion, Usuario autor, Topico topico, String solucion) {
+
+    public Respuesta(Long id, String mensaje, LocalDateTime fechaCreacion, Topico topico, Usuario autor, String solucion) {
         this.id = id;
         this.mensaje = mensaje;
         this.fechaCreacion = fechaCreacion;
+        this.topico = topico;
         this.autor = autor;
         this.solucion = solucion;
     }
@@ -61,5 +63,9 @@ public class Respuesta {
 
     public String getSolucion() {
         return solucion;
+    }
+
+    public Topico getTopico() {
+        return topico;
     }
 }
