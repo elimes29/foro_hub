@@ -1,6 +1,7 @@
 package com.alura.forohub.domain.usuario;
 
 import com.alura.forohub.domain.perfil.Perfil;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -27,6 +28,7 @@ public class Usuario {
     private String contrasena;
 
     @ManyToMany(fetch = FetchType.LAZY)  // Relación muchos a muchos con Perfil
+    @JsonManagedReference
     @JoinTable(
             name = "usuarios_perfiles",
             joinColumns = @JoinColumn(name = "usuario_id"),

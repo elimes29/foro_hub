@@ -1,6 +1,7 @@
 package com.alura.forohub.domain.perfil;
 
 import com.alura.forohub.domain.usuario.Usuario;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class Perfil {
     private String nombre;
 
     @ManyToMany(mappedBy = "perfiles") // Relación inversa de la relación en Usuario
+    @JsonBackReference
     private List<Usuario> usuarios = new ArrayList<>();
 
     public Perfil(@Valid DatosRegistraPerfil datosRegistraPerfil) {

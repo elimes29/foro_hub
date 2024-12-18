@@ -1,5 +1,6 @@
 package com.alura.forohub.domain.usuario;
 
+import com.alura.forohub.domain.perfil.DatosRegistraPerfil;
 import com.alura.forohub.domain.perfil.Perfil;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Email;
@@ -15,7 +16,7 @@ public record DatosRegistraUsuario(
         @NotBlank @Email @JsonProperty("correo_electronico") String correoElectronico,
         @NotBlank @Pattern(regexp = ".{6,}",
                 message = "La contraseña debe tener al menos 6 caracteres.") String contrasena,
-        List<Perfil> perfiles
+        List<DatosRegistraPerfil> perfiles
 ) {
 
 }
