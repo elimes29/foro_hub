@@ -174,13 +174,13 @@ public class TopicoController {
         Optional<Topico> topicoOptional = topicoRepository.findById(id);
         Topico topico = new Topico();
         if (topicoOptional.isPresent()){
-            topico = topicoOptional.get();
+            topicoRepository.deleteById(id);
+            return ResponseEntity.noContent().build();
         }else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(null);
         }
-        topicoRepository.delete(topico);
-        return ResponseEntity.noContent().build();
+
     }
 
 
