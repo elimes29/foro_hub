@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 @Entity(name = "Topico")
 @Table(name = "topicos")
@@ -97,5 +98,27 @@ public class Topico {
                 ", autor=" + autor +
                 ", curso=" + curso +
                 '}';
+    }
+
+    public void agregaFechaStatusCursoAutor(Curso curso, Usuario autor, String mensaje, String titulo) {
+        this.fechaCreacion= LocalDateTime.now();
+        this.status = "Activo;";
+        this.curso = curso;
+        this.autor = autor;
+        this.mensaje = mensaje;
+        this.titulo = titulo;
+    }
+
+    public void cambiaMensajeTitulo(String mensaje, String titulo) {
+        this.mensaje = mensaje;
+        this.titulo = titulo;
+    }
+
+    public void cambiaTitulo(String titulo) {
+        this.titulo=titulo;
+    }
+
+    public void cambiaMensaje(String mensaje) {
+        this.mensaje = mensaje;
     }
 }

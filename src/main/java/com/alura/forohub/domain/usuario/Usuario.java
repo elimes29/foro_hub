@@ -4,6 +4,7 @@ import com.alura.forohub.domain.perfil.Perfil;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -80,4 +81,6 @@ public class Usuario {
                 ", perfiles=" + perfiles +
                 '}';
     }
+
+
 }

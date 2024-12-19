@@ -17,9 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import java.net.URI;
-import java.util.Collections;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -38,7 +36,13 @@ public class UsuarioController {
     @GetMapping
     public ResponseEntity<Page<DatosSalidaUsuario>> obtenerUsuarios(Pageable paginacion){
         return  ResponseEntity.ok(usuarioRepository.findAll(paginacion)
-                .map(u -> new DatosSalidaUsuario(u.getId(),u.getNombre(), u.getPerfiles().stream().map(p -> new DatosSalidaPerfil(p.getId(), p.getNombre())).toList())));
+                .map(u -> new DatosSalidaUsuario(
+                        u.getId(),
+                        u.getNombre(),
+                        u.getPerfiles()
+                                .stream().map(p -> new DatosSalidaPerfil(
+                                        p.getId(),
+                                        p.getNombre())).toList())));
     }
 
     @Transactional
