@@ -1,13 +1,11 @@
 package com.alura.forohub.controller;
 
 import com.alura.forohub.domain.curso.Curso;
-import com.alura.forohub.domain.curso.CursoRepository;
 import com.alura.forohub.domain.curso.CursoServicio;
-import com.alura.forohub.domain.respuesta.RespuestaRepository;
 import com.alura.forohub.domain.topico.*;
 import com.alura.forohub.domain.usuario.Usuario;
-import com.alura.forohub.domain.usuario.UsuarioRepository;
 import com.alura.forohub.domain.usuario.UsuarioServicio;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
@@ -26,6 +23,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/topicos")
+@SecurityRequirement(name = "bearer-key")
 public class TopicoController {
 
     @Autowired

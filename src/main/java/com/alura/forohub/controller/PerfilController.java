@@ -4,6 +4,7 @@ import com.alura.forohub.domain.perfil.DatosSalidaPerfil;
 import com.alura.forohub.domain.perfil.DatosRegistraPerfil;
 import com.alura.forohub.domain.perfil.Perfil;
 import com.alura.forohub.domain.perfil.PerfilRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,6 +21,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/perfiles")
+@SecurityRequirement(name = "bearer-key")
 public class PerfilController {
 
     @Autowired

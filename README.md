@@ -1,154 +1,158 @@
-<h1 align="center">üåü Foro Hub - API REST para Gesti√≥n de T√≥picos üåü</h1>
+<h1 align="center">?? Foro Hub - API REST para Gesti®Æn de T®Æpicos ??</h1>
 
 <p align="center">
-    Bienvenido a <strong>Foro Hub</strong>, un proyecto que replica el funcionamiento de un foro en el que los usuarios pueden interactuar mediante t√≥picos y respuestas. Este desaf√≠o de back-end utiliza <strong>Spring Boot</strong> para implementar una API REST funcional y bien estructurada.
+    Bienvenido a <strong>Foro Hub</strong>, un proyecto que replica el funcionamiento de un foro en el que los usuarios pueden interactuar mediante t®Æpicos y respuestas. Este desaf®™o de back-end utiliza <strong>Spring Boot</strong> para implementar una API REST funcional y bien estructurada.
 </p>
 
 <p align="center">
-    <a href="#-descripci√≥n-del-proyecto">Descripci√≥n</a> ‚Ä¢
-    <a href="#-funcionalidades">Funcionalidades</a> ‚Ä¢
-    <a href="#-tecnolog√≠as-utilizadas">Tecnolog√≠as</a> ‚Ä¢
-    <a href="#-instalaci√≥n-y-configuraci√≥n">Instalaci√≥n</a> ‚Ä¢
-    <a href="#-uso-de-la-aplicaci√≥n">Uso</a> ‚Ä¢
-    <a href="#-pruebas">Pruebas</a> ‚Ä¢
-    <a href="#-contribuciones">Contribuciones</a> ‚Ä¢
+    <a href="#-descripci®Æn-del-proyecto">Descripci®Æn</a> ?
+    <a href="#-funcionalidades">Funcionalidades</a> ?
+    <a href="#-tecnolog®™as-utilizadas">Tecnolog®™as</a> ?
+    <a href="#-instalaci®Æn-y-configuraci®Æn">Instalaci®Æn</a> ?
+    <a href="#-documentaci®Æn-de-la-api">Documentaci®Æn</a> ?
+    <a href="#-uso-de-la-aplicaci®Æn">Uso</a> ?
+    <a href="#-pruebas">Pruebas</a> ?
+    <a href="#-contribuciones">Contribuciones</a> ?
     <a href="#-contacto">Contacto</a>
 </p>
 
 ---
 
-## üìã Descripci√≥n del Proyecto
+## ?? Descripci®Æn del Proyecto
 
-Foro Hub es una API REST dise√±ada para replicar el funcionamiento del back-end de un foro. Los usuarios pueden crear, leer, actualizar y eliminar t√≥picos, lo que permite gestionar de manera eficiente las interacciones de una comunidad.
+Foro Hub es una API REST dise?ada para replicar el funcionamiento del back-end de un foro. Los usuarios pueden crear, leer, actualizar y eliminar t®Æpicos, lo que permite gestionar de manera eficiente las interacciones de una comunidad.
 
 El proyecto se enfoca en:
 
 - **Persistencia de datos** en una base de datos relacional.
 - **Validaciones** de las reglas de negocio.
-- **Autenticaci√≥n y autorizaci√≥n** para proteger los datos.
-- **Seguimiento √°gil** del desarrollo mediante Trello.
-
-Este proyecto utiliza un enfoque √°gil para garantizar la eficiencia y productividad del desarrollo.
+- **Autenticaci®Æn y autorizaci®Æn** para proteger los datos.
+- **Documentaci®Æn din®¢mica** generada con Swagger.
 
 ---
 
-## ‚öôÔ∏è Funcionalidades
+## ?? Funcionalidades
 
-- **üîß CRUD de T√≥picos**:
-  - **Crear un nuevo t√≥pico**.
-  - **Listar todos los t√≥picos creados**.
-  - **Consultar un t√≥pico espec√≠fico**.
-  - **Actualizar un t√≥pico existente**.
-  - **Eliminar un t√≥pico**.
+- **?? CRUD de T®Æpicos**:
+  - **Crear un nuevo t®Æpico**.
+  - **Listar todos los t®Æpicos creados**.
+  - **Consultar un t®Æpico espec®™fico**.
+  - **Actualizar un t®Æpico existente**.
+  - **Eliminar un t®Æpico**.
 
-- **üîí Autenticaci√≥n y Autorizaci√≥n**:
-  - Acceso restringido a ciertas funcionalidades seg√∫n el rol del usuario.
+- **?? Autenticaci®Æn y Autorizaci®Æn**:
+  - Acceso restringido a ciertas funcionalidades seg®≤n el rol del usuario.
 
-- **‚úÖ Validaciones**:
-  - Validaciones espec√≠ficas basadas en reglas de negocio.
+- **? Validaciones**:
+  - Validaciones espec®™ficas basadas en reglas de negocio.
 
-- **üì¶ Persistencia**:
+- **?? Persistencia**:
   - Almacenamiento de datos en una base de datos relacional.
 
+- **?? Documentaci®Æn Autom®¢tica**:
+  - Swagger para exponer la documentaci®Æn interactiva de la API.
+
 ---
 
-## üíª Tecnolog√≠as Utilizadas
+## ?? Tecnolog®™as Utilizadas
 
-- **Java** - versi√≥n 17
-- **Spring Boot** - versi√≥n 3.2.4
+- **Java** - versi®Æn 17
+- **Spring Boot** - versi®Æn 3.2.4
 - **Spring Data JPA** - para operaciones de persistencia
 - **PostgreSQL** - base de datos relacional
-- **Spring Security** - para autenticaci√≥n y autorizaci√≥n
-- **Trello** - para organizaci√≥n y seguimiento del proyecto
+- **Spring Security** - para autenticaci®Æn y autorizaci®Æn
+- **Swagger** - para generaci®Æn de documentaci®Æn interactiva
+- **Trello** - para organizaci®Æn y seguimiento del proyecto
 
 ---
 
-## üîß Instalaci√≥n y Configuraci√≥n
+## ?? Instalaci®Æn y Configuraci®Æn
 
 1. **Clona el repositorio**:
 
    ```bash
    git clone https://github.com/tu-usuario/foro-hub.git
    cd foro-hub
-Configura la base de datos:
-Aseg√∫rate de tener PostgreSQL instalado y crea una base de datos para el proyecto. Configura las credenciales en el archivo application.properties de Spring Boot:
+   
+2. **Configura la base de datos**:
+Aseg®≤rate de tener PostgreSQL instalado y crea una base de datos para el proyecto. Configura las credenciales en el archivo application.properties de Spring Boot:
 
 properties
-Copiar c√≥digo
+Copiar c®Ædigo
 spring.datasource.url=jdbc:postgresql://localhost:5432/foroHubDB
 spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contrase√±a
-Ejecuta el proyecto:
+spring.datasource.password=tu_contrase?a
+
+3. **Ejecuta el proyecto**:
 
 Utiliza Maven para correr el proyecto:
 
 bash
-Copiar c√≥digo
+Copiar c®Ædigo
 ./mvnw spring-boot:run
-üñ•Ô∏è Uso de la Aplicaci√≥n
+
+##?? Documentaci®Æn de la API
+La documentaci®Æn completa de la API REST est®¢ disponible y es accesible a trav®¶s de Swagger en la siguiente URL:
+
+- **Swagger UI**: http://localhost:8080/swagger-ui/index.html
+En esta documentaci®Æn, encontrar®¢s todas las rutas disponibles, ejemplos de solicitudes y respuestas, y detalles sobre los par®¢metros esperados.
+
+##??? Uso de la Aplicaci®Æn
 La API REST de Foro Hub incluye las siguientes rutas principales:
 
-üìÑ Rutas Disponibles
-POST /topicos
-Crear un nuevo t√≥pico.
+##?? Rutas Disponibles
+-**POST /topicos**
+Crear un nuevo t®Æpico.
 
-GET /topicos
-Listar todos los t√≥picos registrados.
+-**GET /topicos**
+Listar todos los t®Æpicos registrados.
 
-GET /topicos/{id}
-Consultar un t√≥pico espec√≠fico por su ID.
+-**GET /topicos/{id}**
+Consultar un t®Æpico espec®™fico por su ID.
 
-PUT /topicos/{id}
-Actualizar un t√≥pico existente.
+-**PUT /topicos/{id}**
+Actualizar un t®Æpico existente.
 
-DELETE /topicos/{id}
-Eliminar un t√≥pico por su ID.
+-**DELETE /topicos/{id}**
+Eliminar un t®Æpico por su ID.
 
-üåê Ejemplo de Petici√≥n
-Crear un nuevo t√≥pico:
-
-bash
-Copiar c√≥digo
-curl -X POST -H "Content-Type: application/json" -d '{
-  "titulo": "T√≠tulo del T√≥pico",
-  "mensaje": "Descripci√≥n del problema",
-  "curso": "Java"
-}' http://localhost:8080/topicos
-‚úÖ Pruebas
+##? Pruebas
 Para ejecutar las pruebas unitarias del proyecto:
 
 bash
-Copiar c√≥digo
 ./mvnw test
 Pruebas incluidas:
 
-Verificaci√≥n del funcionamiento de las rutas CRUD.
+**Verificaci®Æn del funcionamiento de las rutas CRUD.**
 Validaciones de las reglas de negocio.
-Pruebas de seguridad para autenticaci√≥n y autorizaci√≥n.
-ü§ù Contribuciones
-¬°Tu colaboraci√≥n es bienvenida! Sigue estos pasos para contribuir:
+Pruebas de seguridad para autenticaci®Æn y autorizaci®Æn.
+
+##?? Contribuciones
+?Tu colaboraci®Æn es bienvenida! Sigue estos pasos para contribuir:
 
 Haz un fork del repositorio.
 
 Crea una nueva rama para tu funcionalidad:
 
 bash
-Copiar c√≥digo
+Copiar c®Ædigo
 git checkout -b feature/mi-feature
 Realiza tus cambios y haz commit:
 
 bash
-Copiar c√≥digo
+Copiar c®Ædigo
 git commit -m 'Agrega mi-feature'
-Env√≠a tus cambios:
+Env®™a tus cambios:
 
 bash
-Copiar c√≥digo
+Copiar c®Ædigo
 git push origin feature/mi-feature
 Crea un Pull Request y describe tus cambios.
 
-üì¨ Contacto
+##?? Contacto
 Para dudas o sugerencias, puedes contactar a [Tu Nombre]:
 
-GitHub: 
-LinkedIn: Elimes Rodr√≠guez
+-**GitHub:** https://github.com/elimes29
+-**LinkedIn:** Elimes Rodr®™guez
+
+
