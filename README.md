@@ -12,7 +12,6 @@ Bienvenido a **Foro Hub**, un proyecto que replica el funcionamiento de un foro 
 - [🔧 Instalación y Configuración](#-instalación-y-configuración)
 - [📑 Documentación de la API](#-documentación-de-la-api)
 - [🖥️ Uso de la Aplicación](#️-uso-de-la-aplicación)
-- [✅ Pruebas](#-pruebas)
 - [🤝 Contribuciones](#-contribuciones)
 - [📬 Contacto](#-contacto)
 
@@ -59,7 +58,7 @@ El proyecto se enfoca en:
 - **Java** - versión 17
 - **Spring Boot** - versión 3.2.4
 - **Spring Data JPA** - para operaciones de persistencia
-- **PostgreSQL** - base de datos relacional
+- **MySQL** - base de datos relacional
 - **Spring Security** - para autenticación y autorización
 - **Swagger** - para generación de documentación interactiva
 - **Trello** - para organización y seguimiento del proyecto
@@ -71,8 +70,10 @@ El proyecto se enfoca en:
 1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/tu-usuario/foro-hub.git
+   git clone https://github.com/elimes29/foro-hub.git
    cd foro-hub
+   
+---
 
 ## 📑 Documentación de la API
 
@@ -105,21 +106,7 @@ Eliminar un tópico por su ID.
 
 ---
 
-## ✅ Pruebas
-Para ejecutar las pruebas unitarias del proyecto:
-
-    ```bash
-    Copiar código
-    ./mvnw test
-
-**Pruebas incluidas:**
-- **Verificación del funcionamiento de las rutas CRUD.**
-- **Validaciones de las reglas de negocio.**
-- **Pruebas de seguridad para autenticación y autorización.**
-
----
-
-🤝 Contribuciones
+## 🤝 Contribuciones
 ¡Tu colaboración es bienvenida! Sigue estos pasos para contribuir:
 
 Haz un fork del repositorio.
