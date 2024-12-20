@@ -1,6 +1,9 @@
 package com.alura.forohub.controller;
 
 import com.alura.forohub.domain.usuario.DatosAutenticaUsuario;
+import com.alura.forohub.domain.usuario.Usuario;
+import com.alura.forohub.infra.security.DatosJwtToken;
+import com.alura.forohub.infra.security.TokenServicio;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,13 +22,17 @@ public class AutenticacionController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private TokenServicio tokenServicio;
+
 @PostMapping
 public ResponseEntity autentica(@RequestBody @Valid
                                 DatosAutenticaUsuario datosAutenticaUsuario){
-    Authentication token = new UsernamePasswordAuthenticationToken(datosAutenticaUsuario.nombre(),
+    Authentication authToken = new UsernamePasswordAuthenticationToken(datosAutenticaUsuario.nombre(),
             datosAutenticaUsuario.contrasena());
-    authenticationManager.authenticate(token);
-    return ResponseEntity.ok().build();
+    var usuarioAutenticado = authenticationManager.authenticate(authToken);
+    String jwtToken = tokenServicio.generaToken((Usuario) usuarioAutenticado.getPrincipal());
+    return ResponseEntity.ok(new DatosJwtToken(jwtToken));
 }
 
 }
