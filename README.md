@@ -1,158 +1,142 @@
-<h1 align="center">?? Foro Hub - API REST para Gesti¨®n de T¨®picos ??</h1>
+# ğŸŒŸ Foro Hub - API REST para GestiÃ³n de TÃ³picos ğŸŒŸ
 
-<p align="center">
-    Bienvenido a <strong>Foro Hub</strong>, un proyecto que replica el funcionamiento de un foro en el que los usuarios pueden interactuar mediante t¨®picos y respuestas. Este desaf¨ªo de back-end utiliza <strong>Spring Boot</strong> para implementar una API REST funcional y bien estructurada.
-</p>
-
-<p align="center">
-    <a href="#-descripci¨®n-del-proyecto">Descripci¨®n</a> ?
-    <a href="#-funcionalidades">Funcionalidades</a> ?
-    <a href="#-tecnolog¨ªas-utilizadas">Tecnolog¨ªas</a> ?
-    <a href="#-instalaci¨®n-y-configuraci¨®n">Instalaci¨®n</a> ?
-    <a href="#-documentaci¨®n-de-la-api">Documentaci¨®n</a> ?
-    <a href="#-uso-de-la-aplicaci¨®n">Uso</a> ?
-    <a href="#-pruebas">Pruebas</a> ?
-    <a href="#-contribuciones">Contribuciones</a> ?
-    <a href="#-contacto">Contacto</a>
-</p>
+Bienvenido a **Foro Hub**, un proyecto que replica el funcionamiento de un foro en el que los usuarios pueden interactuar mediante tÃ³picos y respuestas. Este desafÃ­o de back-end utiliza **Spring Boot** para implementar una API REST funcional y bien estructurada.
 
 ---
 
-## ?? Descripci¨®n del Proyecto
+## Tabla de Contenidos
 
-Foro Hub es una API REST dise?ada para replicar el funcionamiento del back-end de un foro. Los usuarios pueden crear, leer, actualizar y eliminar t¨®picos, lo que permite gestionar de manera eficiente las interacciones de una comunidad.
+- [ğŸ“‹ DescripciÃ³n del Proyecto](#-descripciÃ³n-del-proyecto)
+- [âš™ï¸ Funcionalidades](#ï¸-funcionalidades)
+- [ğŸ’» TecnologÃ­as Utilizadas](#-tecnologÃ­as-utilizadas)
+- [ğŸ”§ InstalaciÃ³n y ConfiguraciÃ³n](#-instalaciÃ³n-y-configuraciÃ³n)
+- [ğŸ“‘ DocumentaciÃ³n de la API](#-documentaciÃ³n-de-la-api)
+- [ğŸ–¥ï¸ Uso de la AplicaciÃ³n](#ï¸-uso-de-la-aplicaciÃ³n)
+- [âœ… Pruebas](#-pruebas)
+- [ğŸ¤ Contribuciones](#-contribuciones)
+- [ğŸ“¬ Contacto](#-contacto)
+
+---
+
+## ğŸ“‹ DescripciÃ³n del Proyecto
+
+Foro Hub es una API REST diseÃ±ada para replicar el funcionamiento del back-end de un foro. Los usuarios pueden crear, leer, actualizar y eliminar tÃ³picos, lo que permite gestionar de manera eficiente las interacciones de una comunidad.
 
 El proyecto se enfoca en:
 
 - **Persistencia de datos** en una base de datos relacional.
 - **Validaciones** de las reglas de negocio.
-- **Autenticaci¨®n y autorizaci¨®n** para proteger los datos.
-- **Documentaci¨®n din¨¢mica** generada con Swagger.
+- **AutenticaciÃ³n y autorizaciÃ³n** para proteger los datos.
+- **DocumentaciÃ³n dinÃ¡mica** generada con Swagger.
 
 ---
 
-## ?? Funcionalidades
+## âš™ï¸ Funcionalidades
 
-- **?? CRUD de T¨®picos**:
-  - **Crear un nuevo t¨®pico**.
-  - **Listar todos los t¨®picos creados**.
-  - **Consultar un t¨®pico espec¨ªfico**.
-  - **Actualizar un t¨®pico existente**.
-  - **Eliminar un t¨®pico**.
+- **ğŸ”§ CRUD de TÃ³picos**:
+  - Crear un nuevo tÃ³pico.
+  - Listar todos los tÃ³picos creados.
+  - Consultar un tÃ³pico especÃ­fico.
+  - Actualizar un tÃ³pico existente.
+  - Eliminar un tÃ³pico.
 
-- **?? Autenticaci¨®n y Autorizaci¨®n**:
-  - Acceso restringido a ciertas funcionalidades seg¨²n el rol del usuario.
+- **ğŸ”’ AutenticaciÃ³n y AutorizaciÃ³n**:
+  - Acceso restringido a ciertas funcionalidades segÃºn el rol del usuario.
 
-- **? Validaciones**:
-  - Validaciones espec¨ªficas basadas en reglas de negocio.
+- **âœ… Validaciones**:
+  - Validaciones especÃ­ficas basadas en reglas de negocio.
 
-- **?? Persistencia**:
+- **ğŸ“¦ Persistencia**:
   - Almacenamiento de datos en una base de datos relacional.
 
-- **?? Documentaci¨®n Autom¨¢tica**:
-  - Swagger para exponer la documentaci¨®n interactiva de la API.
+- **ğŸ“‘ DocumentaciÃ³n AutomÃ¡tica**:
+  - Swagger para exponer la documentaciÃ³n interactiva de la API.
 
 ---
 
-## ?? Tecnolog¨ªas Utilizadas
+## ğŸ’» TecnologÃ­as Utilizadas
 
-- **Java** - versi¨®n 17
-- **Spring Boot** - versi¨®n 3.2.4
+- **Java** - versiÃ³n 17
+- **Spring Boot** - versiÃ³n 3.2.4
 - **Spring Data JPA** - para operaciones de persistencia
 - **PostgreSQL** - base de datos relacional
-- **Spring Security** - para autenticaci¨®n y autorizaci¨®n
-- **Swagger** - para generaci¨®n de documentaci¨®n interactiva
-- **Trello** - para organizaci¨®n y seguimiento del proyecto
+- **Spring Security** - para autenticaciÃ³n y autorizaciÃ³n
+- **Swagger** - para generaciÃ³n de documentaciÃ³n interactiva
+- **Trello** - para organizaciÃ³n y seguimiento del proyecto
 
 ---
 
-## ?? Instalaci¨®n y Configuraci¨®n
+## ğŸ”§ InstalaciÃ³n y ConfiguraciÃ³n
 
 1. **Clona el repositorio**:
 
    ```bash
    git clone https://github.com/tu-usuario/foro-hub.git
    cd foro-hub
-   
-2. **Configura la base de datos**:
-Aseg¨²rate de tener PostgreSQL instalado y crea una base de datos para el proyecto. Configura las credenciales en el archivo application.properties de Spring Boot:
 
-properties
-Copiar c¨®digo
-spring.datasource.url=jdbc:postgresql://localhost:5432/foroHubDB
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contrase?a
+## ğŸ“‘ DocumentaciÃ³n de la API
 
-3. **Ejecuta el proyecto**:
+La documentaciÃ³n completa de la API REST estÃ¡ disponible y es accesible a travÃ©s de Swagger en la siguiente URL:
 
-Utiliza Maven para correr el proyecto:
+**Swagger UI:** http://localhost:8080/swagger-ui/index.html
+En esta documentaciÃ³n, encontrarÃ¡s todas las rutas disponibles, ejemplos de solicitudes y respuestas, y detalles sobre los parÃ¡metros esperados.
 
-bash
-Copiar c¨®digo
-./mvnw spring-boot:run
+---
 
-##?? Documentaci¨®n de la API
-La documentaci¨®n completa de la API REST est¨¢ disponible y es accesible a trav¨¦s de Swagger en la siguiente URL:
-
-- **Swagger UI**: http://localhost:8080/swagger-ui/index.html
-En esta documentaci¨®n, encontrar¨¢s todas las rutas disponibles, ejemplos de solicitudes y respuestas, y detalles sobre los par¨¢metros esperados.
-
-##??? Uso de la Aplicaci¨®n
+## ğŸ–¥ï¸ Uso de la AplicaciÃ³n
 La API REST de Foro Hub incluye las siguientes rutas principales:
 
-##?? Rutas Disponibles
--**POST /topicos**
-Crear un nuevo t¨®pico.
+## ğŸ“„ Rutas Disponibles
 
--**GET /topicos**
-Listar todos los t¨®picos registrados.
+- **POST /topicos**
+Crear un nuevo tÃ³pico.
 
--**GET /topicos/{id}**
-Consultar un t¨®pico espec¨ªfico por su ID.
+- **GET /topicos**
+Listar todos los tÃ³picos registrados.
 
--**PUT /topicos/{id}**
-Actualizar un t¨®pico existente.
+- **GET /topicos/{id}**
+Consultar un tÃ³pico especÃ­fico por su ID.
 
--**DELETE /topicos/{id}**
-Eliminar un t¨®pico por su ID.
+- **PUT /topicos/{id}**
+Actualizar un tÃ³pico existente.
 
-##? Pruebas
+- **DELETE /topicos/{id}**
+Eliminar un tÃ³pico por su ID.
+
+---
+
+## âœ… Pruebas
 Para ejecutar las pruebas unitarias del proyecto:
 
-bash
-./mvnw test
-Pruebas incluidas:
+    ```bash
+    Copiar cÃ³digo
+    ./mvnw test
 
-**Verificaci¨®n del funcionamiento de las rutas CRUD.**
-Validaciones de las reglas de negocio.
-Pruebas de seguridad para autenticaci¨®n y autorizaci¨®n.
+**Pruebas incluidas:**
+- **VerificaciÃ³n del funcionamiento de las rutas CRUD.**
+- **Validaciones de las reglas de negocio.**
+- **Pruebas de seguridad para autenticaciÃ³n y autorizaciÃ³n.**
 
-##?? Contribuciones
-?Tu colaboraci¨®n es bienvenida! Sigue estos pasos para contribuir:
+---
+
+ğŸ¤ Contribuciones
+Â¡Tu colaboraciÃ³n es bienvenida! Sigue estos pasos para contribuir:
 
 Haz un fork del repositorio.
 
-Crea una nueva rama para tu funcionalidad:
+- **Crea una nueva rama para tu funcionalidad:**
 
-bash
-Copiar c¨®digo
-git checkout -b feature/mi-feature
-Realiza tus cambios y haz commit:
+- **Realiza tus cambios y haz commit:**
 
-bash
-Copiar c¨®digo
-git commit -m 'Agrega mi-feature'
-Env¨ªa tus cambios:
+- **EnvÃ­a tus cambios:**
 
-bash
-Copiar c¨®digo
-git push origin feature/mi-feature
-Crea un Pull Request y describe tus cambios.
+- **Crea un Pull Request y describe tus cambios.**
 
-##?? Contacto
-Para dudas o sugerencias, puedes contactar a [Tu Nombre]:
+---
 
--**GitHub:** https://github.com/elimes29
--**LinkedIn:** Elimes Rodr¨ªguez
+## ğŸ“¬ Contacto
+Para dudas o sugerencias, puedes contactar a Tu Nombre:
 
-
+- **GitHub:** https://github.com/elimes29
+- **LinkedIn:** Elimes RodrÃ­guez
+- **CorreoElectrÃ³nico:** elimesrodriguez@gmail.com elimes29@gmail.com
