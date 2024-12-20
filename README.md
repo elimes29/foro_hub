@@ -1,6 +1,6 @@
 # 🌟 Foro Hub - API REST para Gestión de Tópicos 🌟
 
-Bienvenido a **Foro Hub**, un proyecto que replica el funcionamiento de un foro en el que los usuarios pueden interactuar mediante tópicos y respuestas. Este desafío de back-end utiliza **Spring Boot** para implementar una API REST funcional y bien estructurada.
+Bienvenido a **Foro Hub**, un proyecto que replica el funcionamiento de un foro en el que los usuarios pueden interactuar mediante tópicos y respuestas. Este desafío de back-end de **ALURA-LATAM** y **ORACLE NEXT EDUCATION - ONE** utiliza **Spring Boot** para implementar una API REST funcional y bien estructurada.
 
 ---
 
